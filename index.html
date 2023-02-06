@@ -15,28 +15,35 @@
 </head>
 <body>
 <!-------------------------------- Hero i Nav ---------------------------------->
-    <div class="hero">
+    <div class="hero" id="hero">
         <nav>
-            <h2 class="logo">Miško<span>Transport</span></h2>
+            <h2 class="logo">Miško<span>Transport</span></h2>    
             <ul>
-                <li><a href="#">Početna</a></li>
+                <li><a href="#hero">Početna</a></li>
                 <li><a href="#usluge">Usluge</a></li>
                 <li><a href="#ponuda">Ponuda</a></li>
-                <li><a href="#">Zakaži</a></li>
-                <li><a href="#">Kontakt</a></li>
+                <li><a href="#zakazi">Zakaži</a></li>
+                <li><a href="#footer">Kontakt</a></li>
             </ul>
             <a href="#" class="btn">Termini</a>
         </nav>
+        <button class="hamburger">
+            <div class="bar"></div>
+        </button>
+
+        <div class="mobile-nav">
+            <a href="#hero">Početna</a>
+            <a href="#usluge">Usluge</a>
+            <a href="#ponuda">Ponuda</a>
+            <a href="#zakazi">Zakaži</a>
+            <a href="#footer">Kontakt</a>
+        </div>
+
         <div class="content">
             <h4>Najpovoljniji prevoz</h4>
             <h1>Putnika i <span>Robe</span></h1>
             <h3>Mađarska, Slovačka, Česka, Poljska, Nemačka.</h3>
-            <div class="newslatter">
-                <form>
-                    <input type="email" name="email" id="mail" placeholder="Ukucajte vas Email">
-                    <input type="submit" name="submit" value="Posalji">
-                </form>
-            </div>
+            <a href="#mape-flex" class="dugme">Rute</a>
         </div>
     </div>
 
@@ -55,37 +62,37 @@
     <div class="usluge-container">
 
         <!-- Usluge Box 1 -->
-        <div class="red">
+        <div class="red hidden">
             <i class="fa-solid fa-person-running"></i>
             <h3>Fleksibilnost</h3>
             <p>Dogovor o promeni putanje, graničnog prelaza ili konačne destinacije je uvek moguć. </p>
         </div>
         <!-- Usluge Box 2 -->
-        <div class="red">
+        <div class="red hidden">
             <i class="fa-solid fa-wifi"></i>
             <h3>Wifi</h3>
             <p>Besplatan Wifi tokom celog trajanja vožnje, nevezano u kojoj zemlji se nalazimo. </p>
         </div>
         <!-- Usluge Box 3 -->
-        <div class="red">
+        <div class="red hidden">
             <i class="fa-solid fa-restroom"></i>
             <h3>Stajanja i Pauze</h3>
             <p>Stajanja i Pauze po dogovoru, pumpe, kafici, odmaramo po dogovoru. </p>
         </div>
         <!-- Usluge Box 4 -->
-        <div class="red">
+        <div class="red hidden">
             <i class="fa-solid fa-ban-smoking"></i>
             <h3>Nepušačko Vozilo</h3>
             <p>Pušenje u automobilu je strogo zabranjeno i u kolima se nikada ne puši. </p>
         </div>
         <!-- Usluge Box 5 -->
-        <div class="red">
+        <div class="red hidden">
             <i class="fa-solid fa-snowflake"></i>
             <h3>Grejanje/Klima</h3>
             <p>Grejanje i klima se ne naplaćuju i sastavni su deo svake vožnje sa mnom. </p>
         </div>
         <!-- Usluge Box 6 -->
-        <div class="red">
+        <div class="red hidden">
             <i class="fa-solid fa-tag"></i>
             <h3>Popusti za stalne klijente</h3>
             <p>Na svaku četvrtu vožnju sa mnom dobijate 10% popusta, a na svaku desetu čak 30%.</p>
@@ -104,7 +111,7 @@
     </div>
     <div class="box">
 
-        <div class="card">
+        <div class="card hidden">
             <i class="fas fa-bars"></i>
             <h5>Prevoz Robe</h5>
             <div class="para-box">
@@ -115,7 +122,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card hidden">
             <i class="fas fa-bars"></i>
             <h5>Prevoz Putnika</h5>
             <div class="para-box">
@@ -126,7 +133,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card hidden">
             <i class="fas fa-bars"></i>
             <h5>Susim Meso</h5>
             <div class="para-box">
@@ -141,46 +148,31 @@
 <!-------------------------------- Ponuda KRAJ ------------------------------------------->
 
 <!---------------------------------- Zakazi Voznju --------------------------------------------->
-<div class="contact-me">
+<div class="contact-me hudden" id="zakazi">
     <p>Želim da Zakažem Vožnju.</p>
     <a class="button-two" href="#">Zakaži</a>
 </div>
 <!-------------------------------- Zakazi Voznju KRAJ ------------------------------------------>
 
-<section class="mape-flex">
+<section class="mape-flex" id="mape-flex">
 
     <div class="ruta">
         <h4>BEOGRAD - NOVI SAD - BEČ - NIRNBERG - FRANKFURT</h4>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m46!1m12!1m3!1d5534241.528801196!2d10.088010697864053!3d47.36771936522265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m31!3e0!4m5!1s0x475a7aa3d7b53fbd%3A0x1db8645cf2177ee4!2sBelgrade!3m2!1d44.8125449!2d20.4612299!4m5!1s0x475b10613de93455%3A0xb6f7d683724fe28!2sNovi%20Sad!3m2!1d45.239608499999996!2d19.8227056!4m5!1s0x476d079e5136ca9f%3A0xfdc2e58a51a25b46!2sVienna%2C%20Austria!3m2!1d48.208174299999996!2d16.3738189!4m5!1s0x479f57aeb5b61cd3%3A0xdd5daf85a98c21b7!2sN%C3%BCrnberg%2C%20Germany!3m2!1d49.4521018!2d11.0766654!4m5!1s0x47bd096f477096c5%3A0x422435029b0c600!2sFrankfurt%20am%20Main%2C%20Germany!3m2!1d50.110922099999996!2d8.6821267!5e0!3m2!1sen!2srs!4v1665843468917!5m2!1sen!2srs" 
+        <iframe class="hidden" src="https://www.google.com/maps/embed?pb=!1m46!1m12!1m3!1d5534241.528801196!2d10.088010697864053!3d47.36771936522265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m31!3e0!4m5!1s0x475a7aa3d7b53fbd%3A0x1db8645cf2177ee4!2sBelgrade!3m2!1d44.8125449!2d20.4612299!4m5!1s0x475b10613de93455%3A0xb6f7d683724fe28!2sNovi%20Sad!3m2!1d45.239608499999996!2d19.8227056!4m5!1s0x476d079e5136ca9f%3A0xfdc2e58a51a25b46!2sVienna%2C%20Austria!3m2!1d48.208174299999996!2d16.3738189!4m5!1s0x479f57aeb5b61cd3%3A0xdd5daf85a98c21b7!2sN%C3%BCrnberg%2C%20Germany!3m2!1d49.4521018!2d11.0766654!4m5!1s0x47bd096f477096c5%3A0x422435029b0c600!2sFrankfurt%20am%20Main%2C%20Germany!3m2!1d50.110922099999996!2d8.6821267!5e0!3m2!1sen!2srs!4v1665843468917!5m2!1sen!2srs" 
         width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
     <div class="ruta">
         <h4>BEOGRAD - NOVI SAD - BEČ - NIRNBERG - FRANKFURT</h4>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m46!1m12!1m3!1d5534241.528801196!2d10.088010697864053!3d47.36771936522265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m31!3e0!4m5!1s0x475a7aa3d7b53fbd%3A0x1db8645cf2177ee4!2sBelgrade!3m2!1d44.8125449!2d20.4612299!4m5!1s0x475b10613de93455%3A0xb6f7d683724fe28!2sNovi%20Sad!3m2!1d45.239608499999996!2d19.8227056!4m5!1s0x476d079e5136ca9f%3A0xfdc2e58a51a25b46!2sVienna%2C%20Austria!3m2!1d48.208174299999996!2d16.3738189!4m5!1s0x479f57aeb5b61cd3%3A0xdd5daf85a98c21b7!2sN%C3%BCrnberg%2C%20Germany!3m2!1d49.4521018!2d11.0766654!4m5!1s0x47bd096f477096c5%3A0x422435029b0c600!2sFrankfurt%20am%20Main%2C%20Germany!3m2!1d50.110922099999996!2d8.6821267!5e0!3m2!1sen!2srs!4v1665843468917!5m2!1sen!2srs" 
+        <iframe class="hidden" src="https://www.google.com/maps/embed?pb=!1m46!1m12!1m3!1d5534241.528801196!2d10.088010697864053!3d47.36771936522265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m31!3e0!4m5!1s0x475a7aa3d7b53fbd%3A0x1db8645cf2177ee4!2sBelgrade!3m2!1d44.8125449!2d20.4612299!4m5!1s0x475b10613de93455%3A0xb6f7d683724fe28!2sNovi%20Sad!3m2!1d45.239608499999996!2d19.8227056!4m5!1s0x476d079e5136ca9f%3A0xfdc2e58a51a25b46!2sVienna%2C%20Austria!3m2!1d48.208174299999996!2d16.3738189!4m5!1s0x479f57aeb5b61cd3%3A0xdd5daf85a98c21b7!2sN%C3%BCrnberg%2C%20Germany!3m2!1d49.4521018!2d11.0766654!4m5!1s0x47bd096f477096c5%3A0x422435029b0c600!2sFrankfurt%20am%20Main%2C%20Germany!3m2!1d50.110922099999996!2d8.6821267!5e0!3m2!1sen!2srs!4v1665843468917!5m2!1sen!2srs" 
         width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- FOOTER -->
 
-<footer>
+<footer id="footer">
     <p>Miško <span>Transport</span></p>
     <p>Prevoz Putnika i Robe širom Evrope. Pišite mi na Facebook-u, Email-u 
         ili me pozovite u bilo koje doba dana. 
@@ -191,6 +183,7 @@
         <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
     </div>
 </footer>
-
+<script src="script.js"></script>
+<script defer src="app.js"></script>
 </body>
 </html>

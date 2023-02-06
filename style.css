@@ -12,15 +12,38 @@ span {
 .center {
     text-align: center;
 }
+h1 {
+    color: white;
+    margin: 20px 0px 20px;
+    font-size: 75px;
+}
+h3 {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+h4 {
+    color: #fcfc;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
 h5 {
     color: white;
     font-size: 23px;
     margin-bottom: 15px;
 }
+
+.mobile-nav {
+    display: none;
+}
 /* -----------------GENERAL STVARI KRAJ-----------------------*/
 
 
 /* ---------------------- NAVIGACIJA ------------------------ */
+.hamburger {
+    display: none;
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -29,6 +52,7 @@ nav {
     padding-left: 8%;
     padding-right: 8%;
 }
+
 .logo {
     color: white;
     font-size: 35px;
@@ -79,45 +103,20 @@ nav ul li a:hover {
     left: 8%;
     transform: translateY(-50%);
 }
-h1 {
+.dugme {
+    padding: 20px 100px;
+    font-size: 26px;
     color: white;
-    margin: 20px 0px 20px;
-    font-size: 75px;
-}
-h3 {
-    color: white;
-    font-size: 25px;
-    margin-bottom: 50px;
-}
-h4 {
-    color: #fcfc;
-    letter-spacing: 2px;
-    font-size: 20px;
-}
-.newslatter form {
-    width: 380px;
-    max-width: 100%;
-    position: relative;
-}
-.newslatter form input:first-child{
-    display: inline-block;
-    width: 100%;
-    padding: 14px 130px 14px 15px;
-    border: 2px solid #f9004d;
-    border-radius: 30px;
-}
-.newslatter form input:last-child{
-    position: absolute;
-    display: inline-block;
-    outline: none;
-    border: none;
-    padding: 10px 30px;
-    border-radius: 30px;
+    text-decoration: none;
     background-color: #f9004d;
-    color: white;
+    border-radius: 30px;
     box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
-    top:6px;
-    right: 6px;
+}
+.dugme:hover{
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #f9004d;
+    color: #f9004d;
 }
 /* -------------------- HERO KRAJ ----------------------- */
 
@@ -195,6 +194,7 @@ h4 {
     position: relative;
     overflow: hidden;
     text-align: center;
+    box-shadow: 0px 0px 5px #000, 0px 0px 5px #858585;
 }
 .card i {
     font-size: 50px;
@@ -240,7 +240,7 @@ h4 {
     margin-bottom: 25px;
 }
 .contact-me .button-two {
-    background-color:#f9004d ;
+    background-color:#f9004d;
     color: white;
     text-decoration: none;
     border: 2px solid transparent;
@@ -326,12 +326,36 @@ footer p:nth-child(2) {
 /* ------------------- FOOTER KRAJ ----------------------- */
 
 
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
 
-
-
-
-
-
+.red:nth-child(1) {
+    transition-delay: 200ms;
+}
+.red:nth-child(2) {
+    transition-delay: 300ms;
+}
+.red:nth-child(3) {
+    transition-delay: 400ms;
+}
+.red:nth-child(4) {
+    transition-delay: 200ms;
+}
+.red:nth-child(5) {
+    transition-delay: 300ms;
+}
+.red:nth-child(6) {
+    transition-delay: 400ms;
+}
 
 
 
@@ -405,13 +429,12 @@ footer p:nth-child(2) {
     }
 }
 
-@media only screen and (max-width: 663px) and (min-width: 0px) {
-    .ruta iframe {
-        max-width: 90vw;
-        max-height: auto;
+
+@media only screen and (max-width: 1160px) and (min-width: 1087px){
+    .logo{
+        display: none;
     }
 }
-
 @media only screen and (max-width: 1087px) and (min-width: 0px)  {
     .logo {
         display: none;
@@ -425,13 +448,25 @@ footer p:nth-child(2) {
     nav .btn {
         display: none;
     }
+    .dugme {
+        padding: 15px 100px;
+        
+    }
     .content {
-        left: 5%;
+        position: relative;
         top: 20%;
+        left: 0;
+        margin: 0 auto;
+        text-align: center;
     }
     .content h1{
         font-size: 32px;
         margin: 15px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .content h4{
+        text-align: center;
     }
     .content h3{
        display: none;
@@ -462,4 +497,92 @@ footer p:nth-child(2) {
     .contact-me p{
         text-align: center;
     }
+    }
+
+    @media only screen and (max-width: 663px) and (min-width: 0px) {
+        .ruta iframe {
+            max-width: 90vw;
+            max-height: auto;
+        }
+        .dugme {
+            padding: 10px 50px;
+        }
+        .red {
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    @media only screen and (max-width: 1087px) and (min-width: 0px) {
+        nav {
+            padding-top: 30px;
+        }
+        .hamburger {
+            display: block;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            z-index: 99;
+            position: fixed;
+
+            appearance: none;
+            background: none;
+            outline: none;
+            border: none;
+        }
+
+        .hamburger .bar, .hamburger::after, .hamburger::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 5px;
+            background-color: white;
+            margin: 6px 15px;
+            transition: 0.4s;
+            z-index: 99;
+        }
+
+        .hamburger.is-active::before {
+            transform: rotate(-45deg) translate(-8px, 6px);
+        }
+        .hamburger.is-active .bar {
+            opacity: 0;
+        }
+        .hamburger.is-active::after{
+            transform: rotate(45deg) translate(-9px, -8px);
+        }
+        .mobile-nav {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            min-height: 100vh;
+            background-color: #101010;
+            padding-top: 120px;
+            z-index: 98;
+        }
+        .mobile-nav a {
+            display: block;
+            text-align: center;
+            margin-bottom: 16px;
+            padding: 20px 16px;
+            height: 15vh;
+            background-color: #191919;
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            line-height: 88px;
+        }
+        .mobile-nav.is-active{
+            left: 0;
+            transition: 0.4s;
+        }
+        .mobile-nav a:hover{
+            border: 1px solid #f9004d;
+            background-color: black;
+        }
+        .toggle{
+            left: 100%;
+        }
     }
